@@ -874,3 +874,105 @@ button, a { -webkit-tap-highlight-color: transparent; }
     padding: 26px 22px;
   }
 }
+
+
+/* v1.4 two-column roster grid */
+.profile-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.player-media-card {
+  grid-template-columns: minmax(180px, 42%) 1fr;
+  min-height: 360px;
+}
+
+.player-card-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: #080808;
+  overflow: hidden;
+}
+
+.player-card-art img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  max-height: 430px;
+  object-fit: contain;
+  object-position: center;
+  background: #080808;
+}
+
+.player-media-card .player-card-body {
+  padding: 26px 28px;
+}
+
+.player-media-card h2 {
+  margin-bottom: 18px;
+  font-size: clamp(30px, 3vw, 46px);
+}
+
+.player-media-card .player-details {
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.player-media-card .player-bio {
+  margin: 12px 0 14px;
+  font-size: 15px;
+}
+
+.player-live-stats {
+  gap: 14px;
+  padding: 16px 0;
+}
+
+.player-live-stats span {
+  min-width: 68px;
+}
+
+.player-live-stats strong {
+  font-size: 24px !important;
+}
+
+.player-card-nav {
+  gap: 12px;
+  padding-top: 14px;
+}
+
+.player-card-nav a {
+  max-width: 48%;
+  font-size: 10px;
+}
+
+@media (max-width: 1180px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .player-media-card {
+    grid-template-columns: 250px 1fr;
+  }
+
+  .player-card-art img {
+    min-height: 380px;
+    max-height: 440px;
+  }
+}
+
+@media (max-width: 700px) {
+  .player-media-card {
+    grid-template-columns: 1fr;
+  }
+
+  .player-card-art img {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    object-fit: contain;
+  }
+}

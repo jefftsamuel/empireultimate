@@ -1,10 +1,9 @@
-# Empire Ultimate Website v1.3 — Compact Roster Profiles
+# Empire Ultimate Website v1.4 — Two-Column Roster
 
 Changes:
-- Reduced roster profile height significantly.
-- Narrowed player-card images.
-- Reduced heading, padding, and stat spacing.
-- Preserved the media-guide look without requiring excessive scrolling.
-- Kept a stacked mobile layout for readability.
+- Displays two player profiles per row on larger screens.
+- Keeps one profile per row on smaller screens.
+- Uses `object-fit: contain` so the full player-card artwork remains visible.
+- Tightens profile typography, spacing, statistics, and navigation.
 
 Upload all contents over the current GitHub repository files and commit.
