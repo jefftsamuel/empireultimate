@@ -1,14 +1,10 @@
-# Empire Ultimate Website v1.2 — Player Cards
+# Empire Ultimate Website v1.3 — Compact Roster Profiles
 
 Changes:
-- Added 17 uploaded Empire player cards to the roster profiles.
-- Added matching generic Empire placeholders for players without cards:
-  - Dylan Gfeller
-  - Emerson Mitchell
-  - Leo Dollevoet
-- Coach cards from the uploaded folder are preserved outside the player roster for a future coaches section.
-- Reworked the roster page into a media-guide layout.
-- Added previous/next player navigation.
-- Live Goals, Assists, Points, and Defenses remain connected to Google Sheets.
+- Reduced roster profile height significantly.
+- Narrowed player-card images.
+- Reduced heading, padding, and stat spacing.
+- Preserved the media-guide look without requiring excessive scrolling.
+- Kept a stacked mobile layout for readability.
 
 Upload all contents over the current GitHub repository files and commit.
