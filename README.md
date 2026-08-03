@@ -1,12 +1,14 @@
-# Empire Ultimate Website v1.0 — Launch Candidate
+# Empire Ultimate Website v1.1 — Data Fix
 
-Open `index.html` in a modern browser.
+This update fixes the live roster and statistics integration.
 
-Final launch-candidate adjustment:
-- Reduced the “Grow Together. Build Champions.” heading so it supports the page instead of competing with the hero.
+Fixes:
+- Stats Leaders now populate correctly.
+- Homepage roster now populates.
+- All 20 Empire players are retained.
+- The first two spreadsheet players are no longer skipped.
+- The spreadsheet “Totals” row is excluded.
+- Defenses now reads correctly from Column G.
+- The website still displays its saved Empire roster if Google Sheets is temporarily unavailable.
 
-The website uses:
-- Empire Ultimate Google Sheet for roster and selected stats
-- Empire Ultimate public Google Calendar for schedule
-- Instagram-ready update section
-- Placeholder player profile details until player cards are supplied
+Upload all files in this package over the existing GitHub repository files.

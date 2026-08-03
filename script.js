@@ -41,4 +41,55 @@ contactForm.addEventListener('submit', event => {
   formNote.style.color = '#ffffff';
   contactForm.reset();
 });
-\nif(window.EMPIRE_CONFIG&&window.EmpireData){window.EmpireData.loadPlayers().then(({players,live})=>{const lg=document.getElementById("leaders-grid"),rl=document.getElementById("roster-list"),st=document.getElementById("stats-status");const cats=[["Goals","goals"],["Assists","assists"],["Points","points"],["Defenses","defenses"]];if(lg)lg.innerHTML=cats.map(([l,k])=>{const p=[...players].sort((a,b)=>b[k]-a[k]||a.name.localeCompare(b.name))[0];return `<a class="leader-card" href="roster.html#${window.EmpireData.slug(p.name)}"><span>${l}</span><strong>${p[k]}</strong><h3>${p.name}</h3></a>`}).join("");if(rl)rl.innerHTML=[...players].sort((a,b)=>a.name.localeCompare(b.name)).map(p=>`<a href="roster.html#${window.EmpireData.slug(p.name)}">${p.name}<span>View profile →</span></a>`).join("");if(st){st.textContent=live?"Live from Google Sheets":"Showing saved stats preview";if(live)st.classList.add("live")}})}
+
+
+if (window.EMPIRE_CONFIG && window.EmpireData) {
+  window.EmpireData.loadPlayers().then(({ players, live }) => {
+    const leadersGrid = document.getElementById("leaders-grid");
+    const rosterList = document.getElementById("roster-list");
+    const status = document.getElementById("stats-status");
+
+    const categories = [
+      ["Goals", "goals"],
+      ["Assists", "assists"],
+      ["Points", "points"],
+      ["Defenses", "defenses"]
+    ];
+
+    if (leadersGrid && players.length) {
+      leadersGrid.innerHTML = categories
+        .map(([label, key]) => {
+          const leader = [...players].sort(
+            (a, b) => b[key] - a[key] || a.name.localeCompare(b.name)
+          )[0];
+
+          return `
+            <a class="leader-card" href="roster.html#${window.EmpireData.slug(leader.name)}">
+              <span>${label}</span>
+              <strong>${leader[key]}</strong>
+              <h3>${leader.name}</h3>
+            </a>`;
+        })
+        .join("");
+    }
+
+    if (rosterList) {
+      rosterList.innerHTML = [...players]
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .map(
+          player => `
+            <a href="roster.html#${window.EmpireData.slug(player.name)}">
+              ${player.name}<span>View profile →</span>
+            </a>`
+        )
+        .join("");
+    }
+
+    if (status) {
+      status.textContent = live
+        ? "Live from Google Sheets"
+        : "Saved Empire stats preview";
+      status.classList.toggle("live", live);
+    }
+  });
+}
