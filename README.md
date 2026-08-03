@@ -1,14 +1,14 @@
-# Empire Ultimate Website v1.1 — Data Fix
+# Empire Ultimate Website v1.2 — Player Cards
 
-This update fixes the live roster and statistics integration.
+Changes:
+- Added 17 uploaded Empire player cards to the roster profiles.
+- Added matching generic Empire placeholders for players without cards:
+  - Dylan Gfeller
+  - Emerson Mitchell
+  - Leo Dollevoet
+- Coach cards from the uploaded folder are preserved outside the player roster for a future coaches section.
+- Reworked the roster page into a media-guide layout.
+- Added previous/next player navigation.
+- Live Goals, Assists, Points, and Defenses remain connected to Google Sheets.
 
-Fixes:
-- Stats Leaders now populate correctly.
-- Homepage roster now populates.
-- All 20 Empire players are retained.
-- The first two spreadsheet players are no longer skipped.
-- The spreadsheet “Totals” row is excluded.
-- Defenses now reads correctly from Column G.
-- The website still displays its saved Empire roster if Google Sheets is temporarily unavailable.
-
-Upload all files in this package over the existing GitHub repository files.
+Upload all contents over the current GitHub repository files and commit.
