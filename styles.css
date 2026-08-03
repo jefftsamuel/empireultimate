@@ -976,3 +976,26 @@ button, a { -webkit-tap-highlight-color: transparent; }
     object-fit: contain;
   }
 }
+
+
+/* v1.5 four stats on one row */
+.player-live-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.player-live-stats span {
+  min-width: 0;
+  text-align: center;
+}
+
+.player-live-stats strong {
+  font-size: 22px !important;
+}
+
+@media (max-width: 700px) {
+  .player-live-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
