@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Empire Ultimate player profile.">
+  <title>Player Profile | Empire Ultimate</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Empire Ultimate home">
+      <img class="brand-helmet" src="assets/images/empire-helmet-transparent.png" alt="">
+      <span class="brand-type">
+        <img class="brand-wordmark" src="assets/images/empire-wordmark-transparent.png" alt="Empire">
+        <span class="brand-subtitle">ULTIMATE</span>
+      </span>
+    </a>
+    <nav class="site-nav roster-nav">
+      <a href="index.html">Home</a>
+      <a class="active" href="roster.html">Roster</a>
+      <a href="index.html#events">Schedule</a>
+      <a href="join.html">Join Empire</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section individual-profile-shell">
+      <a class="text-link profile-back" href="roster.html">← Back to roster</a>
+      <div id="individual-profile">
+        <p>Loading player profile…</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    window.EMPIRE_CONFIG = {
+      spreadsheetId: "1A0YqU2ktNMVOdlkCgaHnC2WQZYamUbJfSIHg2moKrO4",
+      sheetName: "Empire Ultimate: Cumulative Stats",
+      fallbackPlayers: []
+    };
+  </script>
+  <script src="data.js"></script>
+  <script src="profile.js"></script>
+</body>
+</html>

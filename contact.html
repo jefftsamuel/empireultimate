@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+<title>Contact | Empire Ultimate</title></head><body>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Empire Ultimate home">
+    <img class="brand-helmet" src="assets/images/empire-helmet-transparent.png" alt="">
+    <span class="brand-type">
+      <img class="brand-wordmark" src="assets/images/empire-wordmark-transparent.png" alt="Empire">
+      <span class="brand-subtitle">ULTIMATE</span>
+    </span>
+  </a>
+  <nav class="site-nav roster-nav">
+    <a href="index.html">Home</a>
+    <a href="roster.html">Roster</a>
+    <a href="index.html#events">Schedule</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<main class="form-page">
+  <section class="form-hero">
+    <p class="section-label">Get in Touch</p>
+    <h1>Contact Us</h1>
+    <p>Send Empire Ultimate a message.</p>
+  </section>
+  <section class="form-panel">
+    <form action="https://formsubmit.co/empireultimateclub@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New Empire Ultimate Contact Message">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://jefftsamuel.github.io/empireultimate/thanks.html">
+      <input type="text" name="_honey" style="display:none">
+      <input type="hidden" name="_captcha" value="true">
+      <div class="form-grid">
+        <label>Name<input type="text" name="Name" required></label>
+        <label>Email Address<input type="email" name="email" required></label>
+        <label class="form-full">Subject<input type="text" name="Subject"></label>
+        <label class="form-full">Message<textarea name="Message" rows="7" required></textarea></label>
+      </div>
+      <button class="button button-primary" type="submit">Send Message</button>
+    </form>
+  </section>
+</main>
+</body></html>
