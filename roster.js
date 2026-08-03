@@ -4,6 +4,8 @@ if (window.EmpireData) {
     const grid = document.getElementById("profile-grid");
     const status = document.getElementById("roster-status");
 
+    const playerMeta = {"Ben Lahey": {"position": "Cutter", "hometown": "Vernon, BC"}, "Benji Cooke": {"position": "Handler", "hometown": "Vernon, BC"}, "Charlie McKnight": {"position": "Handler", "hometown": "Vernon, BC"}, "Chase Knowlton": {"position": "Handler", "hometown": "Summerland, BC"}, "Coby Martyn": {"position": "Cutter", "hometown": "Vernon, BC"}, "Daniel Cooke": {"position": "Cutter", "hometown": "Vernon, BC"}, "David Oyekanmi": {"position": "Striker", "hometown": "Vernon, BC"}, "Devon Berglund": {"position": "Cutter", "hometown": "Vernon, BC"}, "Dylan Gfeller": {"position": "Striker", "hometown": "Summerland, BC"}, "Emerson Mitchell": {"position": "Handler", "hometown": "Summerland, BC"}, "Euan Hague": {"position": "Handler", "hometown": "Vernon, BC"}, "Joseph Bonda": {"position": "Striker", "hometown": "Summerland, BC"}, "Kaden Terleski": {"position": "Cutter", "hometown": "Vernon, BC"}, "Kai Lalonde": {"position": "Cutter", "hometown": "Vernon, BC"}, "Kayden Weiss": {"position": "Cutter", "hometown": "Vernon, BC"}, "Leo Dollevoet": {"position": "Handler", "hometown": "Summerland, BC"}, "Ryan Ansdell": {"position": "Striker", "hometown": "Vernon, BC"}, "Rylan Terleski": {"position": "Striker", "hometown": "Vernon, BC"}, "Samuel Oyekanmi": {"position": "Cutter", "hometown": "Vernon, BC"}, "Siyong Shim": {"position": "Striker", "hometown": "Vernon, BC"}, "Landen Grimard-Newstead": {"position": "Striker", "hometown": "Oliver, BC"}};
+
     const cardPlayers = new Set([
       "ben-lahey",
       "benji-cooke",
@@ -29,6 +31,10 @@ if (window.EmpireData) {
     if (grid) {
       grid.innerHTML = sorted.map((player, index) => {
         const slug = window.EmpireData.slug(player.name);
+        const meta = playerMeta[player.name] || {
+          position: "Coming soon",
+          hometown: "Coming soon"
+        };
         const image = cardPlayers.has(slug)
           ? `assets/images/players/${slug}.jpg`
           : "assets/images/players/placeholder.jpg";
@@ -43,12 +49,11 @@ if (window.EmpireData) {
             </div>
 
             <div class="player-card-body">
-              <p class="section-label">Empire Ultimate</p>
               <h2>${player.name}</h2>
 
               <dl class="player-details">
-                <div><dt>Position</dt><dd>Coming soon</dd></div>
-                <div><dt>Hometown</dt><dd>Coming soon</dd></div>
+                <div><dt>Primary Position</dt><dd>${meta.position}</dd></div>
+                <div><dt>Hometown</dt><dd>${meta.hometown}</dd></div>
               </dl>
 
               <p class="player-bio">Player bio coming soon.</p>

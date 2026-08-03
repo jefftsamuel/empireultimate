@@ -1019,3 +1019,27 @@ button, a { -webkit-tap-highlight-color: transparent; }
     min-height: 320px;
   }
 }
+
+
+/* v1.7 content and spacing refinements */
+.stats-source {
+  gap: 28px;
+}
+
+.stats-source #stats-status {
+  margin-right: 6px;
+}
+
+.player-media-card .player-card-body > h2 {
+  margin-top: 0;
+}
+
+.player-media-card .player-details dt {
+  font-size: 10px;
+}
+
+@media (max-width: 700px) {
+  .stats-source {
+    gap: 12px;
+  }
+}
