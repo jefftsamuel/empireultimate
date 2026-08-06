@@ -1,11 +1,8 @@
-# Empire Ultimate Website v2.0 — Clean Roster Tiles
+# Empire Ultimate Website v2.1 — Placeholder Names
 
 Changes:
-- Removed duplicate player names and details beneath roster cards.
-- Made each player card the complete clickable roster tile.
-- Added a subtle desktop hover overlay with “View Profile.”
-- Kept mobile tiles clean and tap-friendly.
-- Replaced the old grey placeholder with a branded Empire player-card placeholder.
-- Full player names, positions, hometowns, bios, and stats remain on the dedicated profile pages.
+- Player cards with completed artwork remain image-only.
+- Generic “Coming Soon” player cards now display the correct player name.
+- The placeholder name appears in a clean white-bordered label that matches the existing card design.
 
 Upload all contents over the current GitHub repository files and commit.

@@ -1479,3 +1479,30 @@ button, a { -webkit-tap-highlight-color: transparent; }
     display: none;
   }
 }
+
+
+/* v2.1 names on placeholder roster cards */
+.placeholder-player-name {
+  position: absolute;
+  left: 7%;
+  right: 7%;
+  bottom: 6%;
+  z-index: 2;
+  padding: 12px 10px;
+  border: 2px solid white;
+  background: rgba(0, 0, 0, .86);
+  color: white;
+  font-size: clamp(16px, 2vw, 28px);
+  font-weight: 800;
+  line-height: 1.05;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+
+@media (max-width: 650px) {
+  .placeholder-player-name {
+    padding: 8px 6px;
+    font-size: 14px;
+  }
+}

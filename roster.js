@@ -15,10 +15,15 @@ if (window.EmpireData) {
           ? `assets/images/players/${slug}.jpg`
           : "assets/images/players/placeholder.jpg";
 
+        const placeholderName = cardPlayers.has(slug)
+          ? ""
+          : `<span class="placeholder-player-name">${player.name}</span>`;
+
         return `
           <a class="roster-tile" href="profile.html?player=${encodeURIComponent(slug)}"
              aria-label="View ${player.name} profile">
             <img src="${image}" alt="${player.name} Empire player card">
+            ${placeholderName}
             <span class="roster-tile-overlay">
               <strong>View Profile</strong>
               <small>${meta.position} · ${meta.hometown}</small>
