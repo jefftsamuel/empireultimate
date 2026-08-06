@@ -1,11 +1,10 @@
-# Empire Ultimate Website v2.7 — Placeholder Card Match
+# Empire Ultimate Website v2.8 — Placeholder Repair
 
 Changes:
-- Changed the placeholder nameplate to a heavier serif/slab-style font stack.
-- Increased the white nameplate border thickness.
-- Raised and resized the nameplate to better match completed player cards.
-- Enlarged and repositioned the helmet artwork.
-- Removed the redundant “Player Card” line.
-- Moved “Coming Soon” and 2026 into a cleaner, more intentional layout.
+- Fixed the broken helmet artwork by preserving the transparent alpha channel.
+- Enlarged and centred the helmet to better match the completed player cards.
+- Updated the player-name font stack to a narrower athletic slab-serif treatment.
+- Increased nameplate height and border thickness.
+- Preserved the raised nameplate, Coming Soon text, and 2026 placement.
 
 Upload all contents over the current GitHub repository files and commit.

@@ -1712,3 +1712,50 @@ letter-spacing:.08em;
     font-size: clamp(12px, 4.1vw, 18px);
   }
 }
+
+
+/* v2.8 corrected placeholder artwork and athletic nameplate */
+.placeholder-player-name {
+  left: 3.8%;
+  right: 3.8%;
+  bottom: 4.3%;
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 8px 10px;
+  border: 7px solid #fff;
+  background: #050505;
+  overflow: hidden;
+  font-family: "Roboto Slab", "Rockwell Extra Bold", Rockwell, Georgia, serif;
+  font-size: clamp(18px, 2.25vw, 32px);
+  font-weight: 900;
+  letter-spacing: -.045em;
+  line-height: .92;
+  text-shadow: 0 1px 0 #000;
+  box-shadow: 0 0 0 4px #050505;
+  transform: none;
+}
+
+.placeholder-player-name::first-line {
+  font-stretch: condensed;
+}
+
+@supports (font-stretch: condensed) {
+  .placeholder-player-name {
+    font-stretch: condensed;
+  }
+}
+
+@media (max-width: 650px) {
+  .placeholder-player-name {
+    left: 3.5%;
+    right: 3.5%;
+    bottom: 4.1%;
+    min-height: 54px;
+    padding: 8px 4px 6px;
+    border-width: 4px;
+    font-size: clamp(12px, 4.2vw, 19px);
+    box-shadow: 0 0 0 2px #050505;
+  }
+}
