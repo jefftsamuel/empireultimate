@@ -25,8 +25,9 @@ if (window.EmpireData) {
             <img src="${image}" alt="${player.name} Empire player card">
             ${placeholderName}
             <span class="roster-tile-overlay">
-              <strong>View Profile</strong>
-              <small>${meta.position} · ${meta.hometown}</small>
+              <span class="overlay-position">${meta.position}</span>
+              <span class="overlay-location">${meta.hometown}</span>
+              <span class="overlay-link">View Profile →</span>
             </span>
           </a>`;
       }).join("");

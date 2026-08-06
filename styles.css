@@ -1615,3 +1615,16 @@ color:#ef2429;
 text-transform:uppercase;
 letter-spacing:.08em;
 }
+
+
+/* v2.5 confirmed overlay markup and placeholder behavior */
+.roster-tile-overlay .overlay-position,
+.roster-tile-overlay .overlay-location,
+.roster-tile-overlay .overlay-link {
+  display: block;
+}
+
+.roster-tile:hover .placeholder-player-name,
+.roster-tile:focus-visible .placeholder-player-name {
+  opacity: .18;
+}
