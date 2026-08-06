@@ -1,10 +1,10 @@
-# Empire Ultimate Website v2.5 — Corrected Roster Overlay
-
-This corrects the v2.4 implementation error.
+# Empire Ultimate Website v2.6 — Final Profile Polish
 
 Changes:
-- Primary position now appears first in large white text.
-- Hometown appears beneath it in white text.
-- “View Profile →” appears last in smaller Empire red.
-- Updated the actual roster JavaScript markup, not just the CSS.
-- Placeholder player names fade slightly on hover so the overlay remains readable.
+- Reduced player-name size on individual profile pages.
+- Shortened and balanced the profile artwork area.
+- Tightened spacing around profile details, bio, and live stats.
+- Rebuilt the generic Coming Soon card so “Player Card” and “Coming Soon” sit well above the player-name overlay.
+- Preserved the improved roster hover hierarchy from v2.5.
+
+Upload all contents over the current GitHub repository files and commit.

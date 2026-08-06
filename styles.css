@@ -1628,3 +1628,59 @@ letter-spacing:.08em;
 .roster-tile:focus-visible .placeholder-player-name {
   opacity: .18;
 }
+
+
+/* v2.6 final profile and placeholder polish */
+.individual-profile-content h1 {
+  font-size: clamp(44px, 5.4vw, 74px);
+  line-height: .94;
+  margin-bottom: 30px;
+}
+
+.individual-profile {
+  align-items: stretch;
+}
+
+.individual-profile-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.individual-profile-art img {
+  width: 100%;
+  height: auto;
+  max-height: 780px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.individual-profile-content {
+  padding-top: clamp(34px, 4.5vw, 60px);
+  padding-bottom: clamp(34px, 4.5vw, 60px);
+}
+
+.profile-bio-block {
+  margin: 34px 0;
+  padding-top: 26px;
+}
+
+.expanded-stats {
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.placeholder-player-name {
+  bottom: 2.2%;
+}
+
+@media (max-width: 760px) {
+  .individual-profile-content h1 {
+    font-size: clamp(40px, 12vw, 58px);
+  }
+
+  .individual-profile-art img {
+    max-height: 620px;
+  }
+}
