@@ -1506,3 +1506,22 @@ button, a { -webkit-tap-highlight-color: transparent; }
     font-size: 14px;
   }
 }
+
+
+/* v2.2 roster overlay polish */
+.roster-tile-overlay{
+  z-index:4;
+}
+.roster-tile-overlay strong{
+  color:#ef2429;
+  text-shadow:0 1px 4px rgba(0,0,0,.7);
+}
+.placeholder-player-name{
+  z-index:3;
+  bottom:3%;
+}
+.roster-tile:hover .placeholder-player-name,
+.roster-tile:focus-visible .placeholder-player-name{
+  opacity:.2;
+  transition:opacity .2s ease;
+}

@@ -1,8 +1,6 @@
-# Empire Ultimate Website v2.1 — Placeholder Names
+# Empire Ultimate Website v2.2
 
-Changes:
-- Player cards with completed artwork remain image-only.
-- Generic “Coming Soon” player cards now display the correct player name.
-- The placeholder name appears in a clean white-bordered label that matches the existing card design.
-
-Upload all contents over the current GitHub repository files and commit.
+Minor roster polish:
+- 'View Profile' now sits above placeholder labels.
+- 'View Profile' changed to Empire red for better visibility.
+- Placeholder name fades on hover so the call-to-action is unobstructed.
