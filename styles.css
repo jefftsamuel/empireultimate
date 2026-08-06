@@ -1220,3 +1220,183 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .form-grid { grid-template-columns: 1fr; }
   .form-full { grid-column: auto; }
 }
+
+
+/* v1.9 mobile-first homepage refinement */
+.about-combined {
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  align-items: center;
+}
+.about-combined .combined-principles {
+  grid-column: 1 / -1;
+  margin-top: 18px;
+}
+.combined-principles article {
+  min-height: 170px;
+}
+
+.roster-home-compact {
+  align-items: center;
+  margin-bottom: 0;
+}
+.roster-home-compact > div {
+  max-width: 720px;
+}
+.roster-home-compact p:not(.section-label) {
+  max-width: 620px;
+  color: var(--muted);
+}
+
+.feature-moment-footer {
+  min-height: 360px;
+}
+.feature-moment-footer .feature-moment-copy {
+  max-width: 760px;
+}
+.feature-moment-footer .feature-moment-copy h2 {
+  font-size: clamp(48px, 7vw, 92px);
+}
+
+@media (max-width: 900px) {
+  .about-combined {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-combined .feature-photo {
+    max-height: 420px;
+  }
+
+  .about-combined .feature-photo img {
+    max-height: 420px;
+    object-fit: cover;
+  }
+
+  .combined-principles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .feature-moment-footer {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 76vh;
+  }
+
+  .hero-content {
+    padding-bottom: 50px;
+  }
+
+  .hero h1 {
+    font-size: clamp(64px, 20vw, 92px);
+  }
+
+  .hero .tagline {
+    margin-bottom: 0;
+    font-size: 28px;
+  }
+
+  .scroll-cue {
+    display: none;
+  }
+
+  .section {
+    padding-top: 54px;
+    padding-bottom: 54px;
+  }
+
+  .about-combined {
+    gap: 22px;
+  }
+
+  .about-combined h2 {
+    font-size: 44px;
+  }
+
+  .about-combined .section-copy > p:not(.section-label) {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .about-combined .feature-photo,
+  .about-combined .feature-photo img {
+    max-height: 280px;
+  }
+
+  .combined-principles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+  }
+
+  .combined-principles article {
+    min-height: 0;
+    padding: 22px 18px;
+  }
+
+  .combined-principles h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+  }
+
+  .combined-principles p {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .instagram-section,
+  .events-section,
+  .team-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .calendar-frame iframe {
+    height: 390px;
+  }
+
+  .leaders-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .leader-card {
+    min-height: 190px;
+    padding: 24px 20px;
+  }
+
+  .leader-card strong {
+    font-size: 48px;
+  }
+
+  .roster-home-compact {
+    align-items: flex-start;
+    gap: 22px;
+  }
+
+  .roster-home-compact .button {
+    width: 100%;
+  }
+
+  .feature-moment-footer {
+    min-height: 245px;
+  }
+
+  .feature-moment-footer .feature-moment-copy {
+    padding: 28px 24px;
+  }
+
+  .feature-moment-footer .feature-moment-copy .section-label {
+    font-size: 10px;
+  }
+
+  .feature-moment-footer .feature-moment-copy h2 {
+    font-size: 44px;
+  }
+
+  .site-footer {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}

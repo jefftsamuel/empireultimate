@@ -1,14 +1,13 @@
-# Empire Ultimate Website v1.8 — Forms and Profile Architecture
+# Empire Ultimate Website v1.9 — Mobile-First Homepage
 
 Changes:
-- Added a working Join Empire form.
-- Added a working Contact Us form.
-- Both forms send submissions to empireultimateclub@gmail.com using FormSubmit.
-- Added a thank-you page.
-- Roster page is now a compact quick-view grid.
-- Quick views no longer contain bios or previous/next navigation.
-- Each player links to a dedicated expanded profile page.
-- Expanded profiles include room for future player bios and live stats.
+- Removed the hero Join Empire and Learn More buttons.
+- Combined Who We Are and Why Empire into one section.
+- Kept the team photo and four club principles.
+- Changed the four principles to a compact two-by-two mobile layout.
+- Removed the long homepage roster list and replaced it with a focused roster link.
+- Removed the redundant homepage Join section; the dedicated Join Empire page remains.
+- Moved Raise the Standard to a shorter banner immediately before the footer.
+- Reduced mobile section padding, image heights, heading sizes, calendar height, and stat-card height.
 
-Important setup:
-Submit either form once after publishing. FormSubmit will email empireultimateclub@gmail.com asking you to confirm/activate the forms.
+Upload all contents over the current GitHub repository files and commit.
