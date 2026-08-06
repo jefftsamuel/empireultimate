@@ -1759,3 +1759,34 @@ letter-spacing:.08em;
     box-shadow: 0 0 0 2px #050505;
   }
 }
+
+
+/* v3.0 final placeholder nameplate refinement */
+.placeholder-player-name {
+  left: 4.2%;
+  right: 4.2%;
+  bottom: 4.7%;
+  min-height: 66px;
+  padding: 8px 8px 6px;
+  border: 5px solid #fff;
+  background: #050505;
+  font-family: "Roboto Slab", "Arial Narrow", "Roboto Condensed", Rockwell, Georgia, serif;
+  font-size: clamp(17px, 1.95vw, 28px);
+  font-weight: 700;
+  letter-spacing: -.04em;
+  line-height: .92;
+  box-shadow: 0 0 0 3px #050505;
+}
+
+@media (max-width: 650px) {
+  .placeholder-player-name {
+    left: 4%;
+    right: 4%;
+    bottom: 4.5%;
+    min-height: 44px;
+    padding: 6px 4px 4px;
+    border-width: 3px;
+    font-size: clamp(11px, 3.8vw, 17px);
+    box-shadow: 0 0 0 2px #050505;
+  }
+}
