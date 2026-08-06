@@ -16,24 +16,13 @@ if (window.EmpireData) {
           : "assets/images/players/placeholder.jpg";
 
         return `
-          <a class="quick-player-card" href="profile.html?player=${encodeURIComponent(slug)}">
-            <div class="quick-player-art">
-              <img src="${image}" alt="${player.name} Empire player card">
-            </div>
-            <div class="quick-player-body">
-              <h2>${player.name}</h2>
-              <div class="quick-player-meta">
-                <span><small>Primary Position</small>${meta.position}</span>
-                <span><small>Hometown</small>${meta.hometown}</span>
-              </div>
-              <div class="quick-player-stats">
-                <span><strong>${player.goals}</strong>Goals</span>
-                <span><strong>${player.assists}</strong>Assists</span>
-                <span><strong>${player.points}</strong>Points</span>
-                <span><strong>${player.defenses}</strong>Defenses</span>
-              </div>
-              <div class="quick-player-link">View full profile →</div>
-            </div>
+          <a class="roster-tile" href="profile.html?player=${encodeURIComponent(slug)}"
+             aria-label="View ${player.name} profile">
+            <img src="${image}" alt="${player.name} Empire player card">
+            <span class="roster-tile-overlay">
+              <strong>View Profile</strong>
+              <small>${meta.position} · ${meta.hometown}</small>
+            </span>
           </a>`;
       }).join("");
     }
