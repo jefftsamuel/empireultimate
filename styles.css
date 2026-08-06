@@ -1525,3 +1525,59 @@ button, a { -webkit-tap-highlight-color: transparent; }
   opacity:.2;
   transition:opacity .2s ease;
 }
+
+
+/* v2.3 centered profile overlay and cleaner placeholders */
+.roster-tile-overlay {
+  inset: 0;
+  z-index: 5;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px;
+  background: rgba(0, 0, 0, .58);
+  opacity: 0;
+  transform: none;
+  text-align: center;
+}
+
+.roster-tile-overlay strong {
+  color: #ef2429;
+  font-size: clamp(16px, 2vw, 24px);
+  text-shadow: 0 2px 8px rgba(0,0,0,.9);
+}
+
+.roster-tile-overlay small {
+  color: white;
+  font-size: 11px;
+  text-shadow: 0 2px 8px rgba(0,0,0,.9);
+}
+
+.roster-tile:hover .roster-tile-overlay,
+.roster-tile:focus-visible .roster-tile-overlay {
+  opacity: 1;
+}
+
+.placeholder-player-name {
+  left: 7%;
+  right: 7%;
+  bottom: 2.5%;
+  z-index: 4;
+}
+
+.roster-tile:hover .placeholder-player-name,
+.roster-tile:focus-visible .placeholder-player-name {
+  opacity: 1;
+}
+
+@media (max-width: 650px) {
+  .roster-tile-overlay {
+    display: flex;
+    opacity: 0;
+  }
+
+  .roster-tile:active .roster-tile-overlay,
+  .roster-tile:focus .roster-tile-overlay {
+    opacity: 1;
+  }
+}
