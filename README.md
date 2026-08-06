@@ -1,10 +1,11 @@
-# Empire Ultimate Website v2.6 — Final Profile Polish
+# Empire Ultimate Website v2.7 — Placeholder Card Match
 
 Changes:
-- Reduced player-name size on individual profile pages.
-- Shortened and balanced the profile artwork area.
-- Tightened spacing around profile details, bio, and live stats.
-- Rebuilt the generic Coming Soon card so “Player Card” and “Coming Soon” sit well above the player-name overlay.
-- Preserved the improved roster hover hierarchy from v2.5.
+- Changed the placeholder nameplate to a heavier serif/slab-style font stack.
+- Increased the white nameplate border thickness.
+- Raised and resized the nameplate to better match completed player cards.
+- Enlarged and repositioned the helmet artwork.
+- Removed the redundant “Player Card” line.
+- Moved “Coming Soon” and 2026 into a cleaner, more intentional layout.
 
 Upload all contents over the current GitHub repository files and commit.

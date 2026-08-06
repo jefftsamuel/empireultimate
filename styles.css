@@ -1684,3 +1684,31 @@ letter-spacing:.08em;
     max-height: 620px;
   }
 }
+
+
+/* v2.7 placeholder-card alignment */
+.placeholder-player-name {
+  left: 4.5%;
+  right: 4.5%;
+  bottom: 4.6%;
+  padding: 13px 10px 11px;
+  border: 6px solid #fff;
+  background: #050505;
+  font-family: Rockwell, "Roboto Slab", "Courier New", Georgia, serif;
+  font-size: clamp(17px, 2.1vw, 30px);
+  font-weight: 900;
+  letter-spacing: -.025em;
+  line-height: .96;
+  box-shadow: 0 0 0 3px #050505;
+}
+
+@media (max-width: 650px) {
+  .placeholder-player-name {
+    left: 4%;
+    right: 4%;
+    bottom: 4.3%;
+    padding: 8px 5px 7px;
+    border-width: 4px;
+    font-size: clamp(12px, 4.1vw, 18px);
+  }
+}
