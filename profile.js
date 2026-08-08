@@ -17,7 +17,9 @@ window.EmpireData.loadPlayers().then(({players}) => {
     ? `assets/images/players/${slug}.jpg`
     : "assets/images/players/placeholder.jpg";
 
-  document.title = `${player.name} | Empire Ultimate`;
+  const displayName = player.name === "Daniel Cooke" ? 'Daniel "Cookie" Cooke' : player.name;
+  const bio = (window.EmpirePlayerBios && window.EmpirePlayerBios[player.name]) || "Player profile coming soon.";
+  document.title = `${displayName} | Empire Ultimate`;
 
   container.innerHTML = `
     <article class="individual-profile">
@@ -26,14 +28,14 @@ window.EmpireData.loadPlayers().then(({players}) => {
       </div>
       <div class="individual-profile-content">
         <p class="section-label">Player Profile</p>
-        <h1>${player.name}</h1>
+        <h1>${displayName}</h1>
         <dl class="player-details">
           <div><dt>Primary Position</dt><dd>${meta.position}</dd></div>
           <div><dt>Hometown</dt><dd>${meta.hometown}</dd></div>
         </dl>
         <div class="profile-bio-block">
           <h2>About ${player.name.split(" ")[0]}</h2>
-          <p>Player profile coming soon.</p>
+          <p>${bio}</p>
         </div>
         <div class="quick-player-stats expanded-stats">
           <span><strong>${player.goals}</strong>Goals</span>
