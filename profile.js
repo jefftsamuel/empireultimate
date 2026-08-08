@@ -18,6 +18,7 @@ window.EmpireData.loadPlayers().then(({players}) => {
     : "assets/images/players/placeholder.jpg";
 
   const displayName = player.name === "Daniel Cooke" ? 'Daniel "Cookie" Cooke' : player.name;
+  const nameClass = displayName.length >= 22 ? "profile-name-very-long" : displayName.length >= 18 ? "profile-name-long" : "";
   const bio = (window.EmpirePlayerBios && window.EmpirePlayerBios[player.name]) || "Player profile coming soon.";
   document.title = `${displayName} | Empire Ultimate`;
 
@@ -28,7 +29,7 @@ window.EmpireData.loadPlayers().then(({players}) => {
       </div>
       <div class="individual-profile-content">
         <p class="section-label">Player Profile</p>
-        <h1>${displayName}</h1>
+        <h1 class="${nameClass}">${displayName}</h1>
         <dl class="player-details">
           <div><dt>Primary Position</dt><dd>${meta.position}</dd></div>
           <div><dt>Hometown</dt><dd>${meta.hometown}</dd></div>
