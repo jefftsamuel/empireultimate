@@ -38,11 +38,13 @@ window.EmpireData.loadPlayers().then(({players}) => {
           <h2>About ${player.name.split(" ")[0]}</h2>
           <p>${bio}</p>
         </div>
-        <div class="quick-player-stats expanded-stats">
+        <div class="quick-player-stats expanded-stats profile-stat-line">
+          <span><strong>${player.gamesPlayed}</strong>GP</span>
           <span><strong>${player.goals}</strong>Goals</span>
           <span><strong>${player.assists}</strong>Assists</span>
           <span><strong>${player.points}</strong>Points</span>
           <span><strong>${player.defenses}</strong>Defenses</span>
+          <span><strong>${player.pointsPerGame.toFixed(2)}</strong>PPG</span>
         </div>
       </div>
     </article>`;

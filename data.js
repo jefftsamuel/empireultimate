@@ -21,6 +21,11 @@
       if (!name || excluded.has(key) || seen.has(key)) return false;
       seen.add(key);
       player.name = name;
+      player.gamesPlayed = Number(player.gamesPlayed) || 0;
+      player.pointsPerGame =
+        player.gamesPlayed > 0
+          ? (Number(player.points) || 0) / player.gamesPlayed
+          : 0;
       return true;
     });
   }
@@ -38,12 +43,23 @@
       const value = index =>
         cells[index] && cells[index].v != null ? cells[index].v : "";
 
+      const gamesPlayed = cells
+        .slice(5)
+        .reduce((count, cell) => {
+          const played = cell && cell.v != null ? String(cell.v).trim().toUpperCase() : "";
+          return count + (played === "Y" ? 1 : 0);
+        }, 0);
+
+      const points = Number(value(3)) || 0;
+
       return {
         name: String(value(0)).trim(),
         assists: Number(value(1)) || 0,
         goals: Number(value(2)) || 0,
-        points: Number(value(3)) || 0,
-        defenses: Number(value(4)) || 0
+        points,
+        defenses: Number(value(4)) || 0,
+        gamesPlayed,
+        pointsPerGame: gamesPlayed > 0 ? points / gamesPlayed : 0
       };
     });
 
@@ -52,8 +68,10 @@
 
   async function loadPlayers() {
     const sheet = encodeURIComponent(config.sheetName);
-    const query = encodeURIComponent("select A,B,C,D,G where A is not null");
-    const range = encodeURIComponent("A3:G1000");
+    const query = encodeURIComponent(
+      "select A,B,C,D,G,U,AB,AI,AP,AW,BD,BK,BR,BY where A is not null"
+    );
+    const range = encodeURIComponent("A3:BY1000");
     const url =
       `https://docs.google.com/spreadsheets/d/${config.spreadsheetId}` +
       `/gviz/tq?sheet=${sheet}&range=${range}&tqx=out:json&tq=${query}`;

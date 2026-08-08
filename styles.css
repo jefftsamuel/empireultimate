@@ -1809,3 +1809,40 @@ letter-spacing:.08em;
     font-size: clamp(32px, 8.8vw, 44px);
   }
 }
+
+
+/* v3.4 Games Played + Points Per Game */
+.profile-stat-line {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 6px;
+  width: 100%;
+}
+
+.profile-stat-line span {
+  min-width: 0;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 9px;
+  letter-spacing: .035em;
+}
+
+.profile-stat-line strong {
+  font-size: clamp(21px, 2.2vw, 32px);
+}
+
+@media (max-width: 700px) {
+  .profile-stat-line {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 2px;
+  }
+
+  .profile-stat-line span {
+    font-size: 7px;
+    letter-spacing: 0;
+  }
+
+  .profile-stat-line strong {
+    font-size: clamp(17px, 5vw, 23px);
+  }
+}
