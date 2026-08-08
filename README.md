@@ -1,13 +1,10 @@
-# Empire Ultimate Website v3.4 — Games Played + Points Per Game
+# Empire Ultimate Website v3.5 — Player Profile Fallback Fix
 
-Includes everything from v3.3.
+Includes everything from v3.4.
 
-New live stats:
-- Games Played (GP) is calculated automatically by counting Y values in each game's Played column.
-- Points Per Game (PPG) is calculated automatically as Total Points / Games Played.
-- Players with 0 GP display 0.00 PPG.
-- Expanded player profiles now show GP, Goals, Assists, Points, Defenses, and PPG on one line.
-- The live Google Sheets connection remains the source of truth, so future Played Y/N updates automatically flow to the website.
-
-Current Played columns read by the website:
-U, AB, AI, AP, AW, BD, BK, BR, BY
+Fixes:
+- profile.html now contains the full embedded Empire roster instead of an empty fallback.
+- Player profile pages continue working if Google Sheets is slow, unavailable, or the live request fails.
+- Landen Grimard-Newstead is included in the embedded fallback roster.
+- Live Games Played (GP) and Points Per Game (PPG) remain unchanged.
+- The live Google Sheet remains the primary source; the embedded roster is only a backup.
