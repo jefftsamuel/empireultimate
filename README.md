@@ -1,17 +1,9 @@
-# Empire Ultimate Website v3.0
+# Empire Ultimate Website v3.1
 
-Includes all v2.9 changes plus final placeholder-card refinements.
-
-Form:
-- Replaced Age with Date of Birth.
-- Removed all age restrictions.
-
-Placeholder cards:
-- Reduced the player-name font weight.
-- Used a narrower condensed/slab-style font stack.
-- Reduced the nameplate height.
-- Reduced border thickness.
-- Raised and tightened the nameplate to better align with completed player cards.
-- Preserved the corrected helmet artwork, Coming Soon treatment, roster hover details, and dedicated profile pages.
-
-Upload all contents over the current GitHub repository files and commit.
+Includes all v3.0 changes plus:
+- Added the approved website bios for the 17 supplied players.
+- Daniel Cooke displays as Daniel "Cookie" Cooke on his expanded profile.
+- Kayden Weiss's Primary Position is now Handler.
+- Devon Berglund remains Cutter; his approved bio is unchanged.
+- Benji Cooke's existing Primary Position is unchanged.
+- Players without supplied bios retain the fallback profile text.
