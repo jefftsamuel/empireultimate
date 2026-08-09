@@ -1,9 +1,8 @@
-# Empire Ultimate Website v3.11
+# Empire Ultimate Website v3.12
 
-Includes everything from v3.10.
+Includes everything from v3.11.
 
-Fixes:
-- Homepage Stats Leaders: Goals | Assists | Total Pts | PPG | Defenses.
-- All five leader cards remain on one row on desktop; no grey overflow box.
-- Restored the Why Empire grid to four columns; removed the accidental fifth grey box.
-- Player profiles: GP | Goals | Assists | Total Pts | PPG | Defenses.
+Fix:
+- Removed the orphaned Stats Leader loading content that appeared below the correct five leader boxes.
+- Homepage leader order remains: Goals | Assists | Total Pts | PPG | Defenses.
+- Player profile stat order remains: GP | Goals | Assists | Total Pts | PPG | Defenses.
