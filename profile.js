@@ -54,7 +54,7 @@ window.EmpireData.loadPlayers().then(({players}) => {
         <img src="${image}" alt="${player.name} Empire player card">
       </div>
       <div class="individual-profile-content">
-        <div class="profile-heading-row"><p class="section-label">Player Profile</p>${statLeaderBadge}</div>
+        <div class="profile-heading-row"><p class="section-label">Player Profile</p></div>
         <h1 class="${nameClass}">${displayName}</h1>
         <dl class="player-details">
           <div><dt>Primary Position</dt><dd>${meta.position}</dd></div>
@@ -64,6 +64,7 @@ window.EmpireData.loadPlayers().then(({players}) => {
           <h2>About ${player.name.split(" ")[0]}</h2>
           <p>${bio}</p>
         </div>
+        ${statLeaderBadge}
         <div class="quick-player-stats expanded-stats profile-stat-line">
           <span><strong>${player.gamesPlayed}</strong>GP</span>
           <span><strong>${player.goals}</strong>Goals</span>

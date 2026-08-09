@@ -2071,3 +2071,22 @@ letter-spacing:.08em;
     gap: 10px;
   }
 }
+
+
+/* v3.17 — visible stat-leader treatment + restore footer feature alignment */
+.feature-moment-footer .feature-moment-copy {
+  max-width: none;
+}
+
+.individual-profile-content > .stat-leader-badge {
+  margin: 18px 0 -1px;
+  width: fit-content;
+  position: relative;
+  z-index: 3;
+}
+
+@media (max-width: 700px) {
+  .individual-profile-content > .stat-leader-badge {
+    margin-top: 16px;
+  }
+}
