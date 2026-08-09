@@ -50,10 +50,10 @@ if (window.EMPIRE_CONFIG && window.EmpireData) {
     const status = document.getElementById("stats-status");
 
     const categories = [
-      ["Total Pts", "points"],
-      ["PPG", "pointsPerGame"],
       ["Goals", "goals"],
       ["Assists", "assists"],
+      ["Total Pts", "points"],
+      ["PPG", "pointsPerGame"],
       ["Defenses", "defenses"]
     ];
 

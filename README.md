@@ -1,8 +1,9 @@
-# Empire Ultimate Website v3.10
+# Empire Ultimate Website v3.11
 
-Includes everything from v3.9.
+Includes everything from v3.10.
 
-Homepage 2026 Stats Leaders:
-Total Pts | PPG | Goals | Assists | Defenses
-
-Games Played remains on individual player profiles, but is not shown as a homepage leader category.
+Fixes:
+- Homepage Stats Leaders: Goals | Assists | Total Pts | PPG | Defenses.
+- All five leader cards remain on one row on desktop; no grey overflow box.
+- Restored the Why Empire grid to four columns; removed the accidental fifth grey box.
+- Player profiles: GP | Goals | Assists | Total Pts | PPG | Defenses.

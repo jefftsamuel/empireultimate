@@ -1897,3 +1897,28 @@ letter-spacing:.08em;
     font-size: clamp(6px, 1.8vw, 9px);
   }
 }
+
+
+/* v3.11 — corrective grid rules */
+.leaders-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+}
+.why-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+@media (max-width: 900px) {
+  .leaders-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  }
+  .why-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 700px) {
+  .leaders-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  }
+  .why-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
