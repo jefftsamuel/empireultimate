@@ -1,3 +1,8 @@
-# Empire Ultimate Website v3.6
+# Empire Ultimate Website v3.7
 
-Includes v3.5. Player profile stats reordered: GP | Total Pts | PPG | Goals | Assists | Defenses.
+Includes everything from v3.6.
+
+Text updates:
+- Roster page clearly identified as the 2026 roster.
+- Join Empire page updated for the 2027 club season.
+- Contact Us introduction refreshed.
