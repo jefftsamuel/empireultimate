@@ -20,6 +20,32 @@ window.EmpireData.loadPlayers().then(({players}) => {
   const displayName = player.name === "Daniel Cooke" ? 'Daniel "Cookie" Cooke' : player.name;
   const nameClass = displayName.length >= 22 ? "profile-name-very-long" : displayName.length >= 18 ? "profile-name-long" : "";
   const bio = (window.EmpirePlayerBios && window.EmpirePlayerBios[player.name]) || "Player profile coming soon.";
+
+  // Determine 2026 leaders automatically from the same loaded stats.
+  // PPG excludes players with zero games played.
+  const leaderCategories = [
+    { key: "goals", label: "Goals", eligible: p => true },
+    { key: "assists", label: "Assists", eligible: p => true },
+    { key: "points", label: "Total Pts", eligible: p => true },
+    { key: "pointsPerGame", label: "PPG", eligible: p => p.gamesPlayed > 0 },
+    { key: "defenses", label: "Defenses", eligible: p => true }
+  ];
+  const leaderLabels = leaderCategories
+    .filter(category => {
+      const eligiblePlayers = players.filter(category.eligible);
+      if (!eligiblePlayers.length) return false;
+      const high = Math.max(...eligiblePlayers.map(p => Number(p[category.key]) || 0));
+      return category.eligible(player) && (Number(player[category.key]) || 0) === high && high > 0;
+    })
+    .map(category => category.label);
+
+  const statLeaderBadge = leaderLabels.length
+    ? `<div class="stat-leader-badge" aria-label="2026 stat leader: ${leaderLabels.join(", ")}">
+         <span class="stat-leader-mark">★</span>
+         <span class="stat-leader-copy"><strong>Stat Leader</strong><small>${leaderLabels.join(" · ")}</small></span>
+       </div>`
+    : "";
+
   document.title = `${displayName} | Empire Ultimate`;
 
   container.innerHTML = `
@@ -28,7 +54,7 @@ window.EmpireData.loadPlayers().then(({players}) => {
         <img src="${image}" alt="${player.name} Empire player card">
       </div>
       <div class="individual-profile-content">
-        <p class="section-label">Player Profile</p>
+        <div class="profile-heading-row"><p class="section-label">Player Profile</p>${statLeaderBadge}</div>
         <h1 class="${nameClass}">${displayName}</h1>
         <dl class="player-details">
           <div><dt>Primary Position</dt><dd>${meta.position}</dd></div>

@@ -2008,3 +2008,66 @@ letter-spacing:.08em;
     margin-bottom: 0;
   }
 }
+
+
+/* v3.16 — automatic Stat Leader profile badge */
+.profile-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 10px;
+}
+
+.profile-heading-row .section-label {
+  margin-bottom: 0;
+}
+
+.stat-leader-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  flex: 0 0 auto;
+  padding: 7px 11px 7px 8px;
+  border: 1px solid #ef2b2d;
+  background: #0b0b0b;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.stat-leader-mark {
+  display: grid;
+  place-items: center;
+  width: 25px;
+  height: 25px;
+  background: #ef2b2d;
+  color: #fff;
+  font-size: 13px;
+}
+
+.stat-leader-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-leader-copy strong {
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: .12em;
+}
+
+.stat-leader-copy small {
+  color: #ef2b2d;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+@media (max-width: 700px) {
+  .profile-heading-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
