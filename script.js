@@ -50,9 +50,10 @@ if (window.EMPIRE_CONFIG && window.EmpireData) {
     const status = document.getElementById("stats-status");
 
     const categories = [
+      ["Total Pts", "points"],
+      ["PPG", "pointsPerGame"],
       ["Goals", "goals"],
       ["Assists", "assists"],
-      ["Points", "points"],
       ["Defenses", "defenses"]
     ];
 
@@ -66,7 +67,7 @@ if (window.EMPIRE_CONFIG && window.EmpireData) {
           return `
             <a class="leader-card" href="roster.html#${window.EmpireData.slug(leader.name)}">
               <span>${label}</span>
-              <strong>${leader[key]}</strong>
+              <strong>${key === "pointsPerGame" ? leader[key].toFixed(2) : leader[key]}</strong>
               <h3>${leader.name}</h3>
             </a>`;
         })

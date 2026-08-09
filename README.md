@@ -1,8 +1,8 @@
-# Empire Ultimate Website v3.7
+# Empire Ultimate Website v3.10
 
-Includes everything from v3.6.
+Includes everything from v3.9.
 
-Text updates:
-- Roster page clearly identified as the 2026 roster.
-- Join Empire page updated for the 2027 club season.
-- Contact Us introduction refreshed.
+Homepage 2026 Stats Leaders:
+Total Pts | PPG | Goals | Assists | Defenses
+
+Games Played remains on individual player profiles, but is not shown as a homepage leader category.
