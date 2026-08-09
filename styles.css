@@ -1814,7 +1814,7 @@ letter-spacing:.08em;
 /* v3.4 Games Played + Points Per Game */
 .profile-stat-line {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 6px;
   width: 100%;
 }
@@ -1833,7 +1833,7 @@ letter-spacing:.08em;
 
 @media (max-width: 700px) {
   .profile-stat-line {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 2px;
   }
 
@@ -1920,5 +1920,47 @@ letter-spacing:.08em;
   }
   .why-grid {
     grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* v3.13 — homepage roster before stats; compact roster names */
+.roster-home-first {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+.roster-list-home {
+  margin-bottom: 72px;
+}
+.stats-heading-home {
+  margin-top: 0;
+}
+@media (min-width: 901px) {
+  .roster-list-home {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .roster-list-home a:nth-child(odd) {
+    border-right: 1px solid var(--line);
+  }
+  .roster-list-home a {
+    border-right: 1px solid var(--line);
+    font-size: 15px;
+    padding: 14px 12px;
+  }
+  .roster-list-home a:nth-child(4n) {
+    border-right: 0;
+  }
+}
+@media (max-width: 700px) {
+  .roster-list-home {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-bottom: 48px;
+  }
+  .roster-list-home a {
+    font-size: 13px;
+    padding: 12px 9px;
+  }
+  .roster-list-home a span {
+    display: none;
   }
 }
