@@ -1964,3 +1964,47 @@ letter-spacing:.08em;
     display: none;
   }
 }
+
+
+/* v3.15 — tighter homepage section spacing */
+#players.section,
+#stats-leaders.section,
+#news.section,
+#events.section {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+#players .roster-home-first {
+  margin-bottom: 20px;
+}
+
+#players .roster-list-home {
+  margin-bottom: 0;
+}
+
+#stats-leaders .section-heading,
+#news .section-heading,
+#events .section-heading {
+  margin-bottom: 24px;
+}
+
+#players + #stats-leaders,
+#stats-leaders + #news,
+#news + #events {
+  margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  #players.section,
+  #stats-leaders.section,
+  #news.section,
+  #events.section {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+
+  #players .roster-list-home {
+    margin-bottom: 0;
+  }
+}

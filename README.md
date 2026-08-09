@@ -1,11 +1,8 @@
-# Empire Ultimate Website v3.14
+# Empire Ultimate Website v3.15
 
-Includes everything from v3.13.
+Includes everything from v3.14.
 
-Homepage order after the About / principles section:
-1. 2026 Roster
-2. 2026 Stats Leaders
-3. Latest Updates
-4. Schedule
-
-All other v3.13 changes are retained.
+Spacing update:
+- Tightened the large black gaps between the main homepage sections.
+- 2026 Roster, Stats Leaders, Latest Updates, and Schedule now flow as one continuous page with consistent spacing.
+- Mobile spacing is also reduced proportionally.
