@@ -1,10 +1,11 @@
-# Empire Ultimate Website v3.13
+# Empire Ultimate Website v3.14
 
-Includes everything from v3.12.
+Includes everything from v3.13.
 
-Changes:
-- Homepage roster section moved above Stats Leaders.
-- Homepage heading updated to “2026 Roster.”
-- Restored the compact list of 2026 player names on the homepage.
-- Player profile stats remain: GP | Goals | Assists | Total Pts | PPG | Defenses.
-- All six player-profile stats are forced onto one row, with responsive sizing.
+Homepage order after the About / principles section:
+1. 2026 Roster
+2. 2026 Stats Leaders
+3. Latest Updates
+4. Schedule
+
+All other v3.13 changes are retained.
