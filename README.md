@@ -1,11 +1,9 @@
-# Empire Ultimate Website v3.16
+# Empire Ultimate Website v3.18
 
-Includes everything from v3.15.
+Includes everything from v3.17.
 
-New:
-- Individual player profiles automatically display a compact STAT LEADER badge when the player currently leads a 2026 statistical category.
-- Categories: Goals, Assists, Total Pts, PPG, Defenses.
-- Multiple leading categories are shown within one badge.
-- Ties are supported automatically.
-- PPG leadership only considers players who have played at least one game.
-- The badge is calculated from the same stats data loaded by the website, so it updates when the stats change.
+Targeted change only:
+- Reduced the “Join Empire (2027)” heading size.
+- Keeps it on one line on desktop.
+- Allows responsive wrapping on smaller screens.
+- No other live-site layout, content, stats, navigation, forms, or functionality changed.

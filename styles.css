@@ -2090,3 +2090,25 @@ letter-spacing:.08em;
     margin-top: 16px;
   }
 }
+
+
+/* v3.18 — targeted Join Empire heading size fix only */
+.form-page .form-hero h1 {
+  font-size: clamp(64px, 6.2vw, 82px);
+  line-height: .96;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .form-page .form-hero h1 {
+    font-size: clamp(48px, 9vw, 68px);
+    white-space: normal;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-page .form-hero h1 {
+    font-size: clamp(42px, 12vw, 58px);
+    line-height: 1;
+  }
+}
